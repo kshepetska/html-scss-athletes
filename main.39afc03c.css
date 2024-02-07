@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2F4F4F; }
+
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(5, auto);
+  gap: 30px 40px;
+  padding: 30px 35px 155px; }
+
+.person {
+  transition: transform 1s ease;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px; }
+  .person__sport, .person__pay {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease, height 1s ease; }
+  .person:hover {
+    background: #EEEEEE;
+    transform: scale(1.2); }
+    .person:hover .person__sport,
+    .person:hover .person__pay {
+      opacity: 1;
+      height: auto; }
+    .person:hover .person__photo img {
+      border-radius: 60px;
+      transition: border-radius 1s ease, transform 1s ease; }
+  .person__photo {
+    position: relative; }
+  .person__photo img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: border-radius 1s ease, transform 1s ease; }
+  .person__rank {
+    position: absolute;
+    top: 84px;
+    left: 158px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 18.4px;
+    color: #8B0000; }
+  .person__name:hover {
+    color: #2F4F4F; }
+  .person__details {
+    margin-top: 8px; }
+
+@media (min-width: 750px) and (max-width: 999px) {
+  main {
+    padding: 30px 160px 155px; } }
+
+@media (min-width: 1000px) and (max-width: 1499px) {
+  main {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    padding: 30px 52px 197px; } }
+
+@media (min-width: 1500px) {
+  main {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    padding: 30px 305px 197px; } }
+
+
+/*# sourceMappingURL=/main.39afc03c.css.map */
